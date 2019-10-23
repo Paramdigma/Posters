@@ -6,7 +6,7 @@ author:
   category:
     - 'Computational Strategies'
     - 'Parametric Architecture'
-  logo: ../assets/img/logo-inverted.svg
+  logo: assets/img/logo-inverted.svg
   social:
     - icon: fas fa-home
       account: www.paramdigma.com
@@ -32,8 +32,8 @@ workshop:
     subtitle: 'Grasshopper Beguinners Course'
     description: 'This 3 day course course will be centred on achitectural design using parametric tools, specifically Rhino+Grasshopper. We will cover the basic use of the different components, and explain the main metodology...'
     collaborator-logos:
-      - ../assets/img/logo-inverted.svg
-      - ../assets/img/logo-inverted.svg
+      - assets/img/logo-inverted.svg
+      - assets/img/logo-inverted.svg
     date:
       day: 29-31
       month: NOVEMBER
@@ -50,7 +50,7 @@ workshop:
       - name: 'Day 3'
         details:
           - 'Modeling a pavillion'
-    bg-img: ../assets/img/frances-gunn-57430-unsplash.jpg
+    bg-img: assets/img/frances-gunn-57430-unsplash.jpg
     bg-overlay:
       color: black
       opacity: 0.5
