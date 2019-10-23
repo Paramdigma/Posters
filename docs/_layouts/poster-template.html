@@ -24,7 +24,7 @@
         {% endcapture %}
 
         {% capture overlayStyle %}
-        {% if variation.ov-color %}background-color: {{variation.ov-color}}{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}}{% endif %}
+        {% if variation.ov-color %}background-color: {{variation.ov-color}};{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}};{% endif %}
         {% endcapture %}
 
         <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
