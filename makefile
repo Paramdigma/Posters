@@ -3,8 +3,8 @@ INPUT_FOLDER = src/
 
 POSTER_DATA_PATHS = $(wildcard $(INPUT_FOLDER)*.md)
 POSTER_DATA = $(notdir $(POSTER_DATA_PATHS))
-POSTER_OUTPUT_NAMES = $(POSTER_DATA:.md=.html)
-POSTER_OUTPUT = $(addprefix $(OUTPUT_FOLDER),$(POSTER_OUTPUT_NAMES))
+POSTER_OUTPUT_NAMES = $(POSTER_DATA:.md=)
+POSTER_OUTPUT = $(addprefix $(OUTPUT_FOLDER),$(POSTER_DATA:.md=.html))
 
 
 $(OUTPUT_FOLDER)%.html: $(INPUT_FOLDER)%.md
@@ -18,7 +18,7 @@ $(OUTPUT_FOLDER)index.md: $(POSTER_OUTPUT)
 	echo 'title: Paramdigma Workshop Posters' >> $@
 	echo '---\n' >> $@
 	for i in $(POSTER_OUTPUT_NAMES); do \
-		echo '-['$$i']('$$i')' >> docs/index.md ; \
+		echo '- ['$$i']('$$i'.html)' >> docs/index.md ; \
 	done
 
 LIST = one two three

@@ -2,4 +2,4 @@
 title: Paramdigma Workshop Posters
 ---
 
--[gh_beguinner.html](gh_beguinner.html)
+- [2019-11-13-GrasshopperBeguinner](2019-11-13-GrasshopperBeguinner.html)
