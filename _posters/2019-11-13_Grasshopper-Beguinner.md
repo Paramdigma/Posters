@@ -26,11 +26,13 @@ schedule:
       - 'Modeling a pavillion'
 
 variations:
-  - image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
+  - image: assets/img/samuel-zeller-j0g8taxHZa0.jpg
     overlay:
       color: blue
       opacity: 0.7
-  - overlay:
+  - image: assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg
+    overlay:
       color: steelblue
       opacity: 0.4
+  -
 ---
