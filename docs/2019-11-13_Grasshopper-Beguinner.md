@@ -1,7 +1,6 @@
 ---
 layout: poster-template
-title: 'Paramdigma'
-subtitle: 'Workshop posters'
+title: 'Grasshopper Beguinner Workshop'
 author:
   name: 'Paramdigma'
   category:
