@@ -6,8 +6,6 @@ title: Paramdigma Workshop Posters
 
 {% for page in site.pages %}
 {% unless page.url == '/' %}
-
 - [{{page.title}}]({{page.url}})
-
 {% endunless %}
 {% endfor %}
