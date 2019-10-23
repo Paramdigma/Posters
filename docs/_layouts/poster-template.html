@@ -16,27 +16,19 @@
         {% for variation in page.variations %}
 
         {% capture text-color %}
-            {% if variation.text-color %}
-                color: {{variation.text-color}}; border-color: {{variation.text-color}}
-            {% endif %}
+            {% if variation.text-color %}color: {{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
         {% endcapture %}
 
         {% capture pageContentStyle %}
             {% if workshop.bg-img%} 
                 background-image: url({{workshop.bg-img}});
             {% endif %}
-            {% if variation.text-color %} 
-                color:{{variation.text-color}}; border-color: {{variation.text-color}};
-            {% endif %}
+            {% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
         {% endcapture %}
 
         {% capture overlayStyle %}
-        {% if variation.ov-color %}
-            background-color: {{variation.ov-color}} 
-        {% endif %}
-        {% if variation.ov-opacity %}
-            opacity: {{variation.ov-opacity}} 
-        {% endif %}
+        {% if variation.ov-color %}background-color: {{variation.ov-color}}{% endif %}
+        {% if variation.ov-opacity %}opacity: {{variation.ov-opacity}}{% endif %}
         {% endcapture %}
 
         <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
