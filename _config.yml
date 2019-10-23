@@ -10,7 +10,7 @@ defaults:
       path: '' # an empty string here means all files in the project
       type: 'posters' # previously `post` in Jekyll 2.2.
     values:
-      layout: 'workshop-poster'
+      layout: 'A3-poster'
 
 author:
   name: 'Paramdigma'

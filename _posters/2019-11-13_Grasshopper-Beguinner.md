@@ -26,13 +26,9 @@ schedule:
       - 'Modeling a pavillion'
 
 variations:
-  - ov-color: black
-    ov-opacity: 0.5
-    background-image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
-  - ov-color: blue
-    ov-opacity: 0.6
-    text-color: white
-  - ov-color: lightblue
-    ov-opacity: 0.7
-    text-color: black
+  - image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
+    overlay:
+      color: blue
+      opacity: 0.7
+    landscape: true
 ---

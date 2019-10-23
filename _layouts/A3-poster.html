@@ -17,18 +17,14 @@
             {% endcapture %}
 
             {% capture pageContentStyle %}
-                {% if variation.background-image%}background-image: url({{variation.background-image}}); 
-                {% else %}background-image: url({{site.background.image}});
-                {% endif %}
-                {% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;
-                {% else %}
-                    
-                {% endif %}
+                {% if variation.image%}background-image: url({{variation.image}}); 
+                {% else %}background-image: url({{site.background.image}});{% endif %}
+                {{text-color}}
             {% endcapture %}
 
             {% capture overlayStyle %}
-            background-color: {% if variation.ov-color %}{{variation.ov-color}}{% else %}{{site.background.overlay.color}}{% endif %};
-            opacity: {% if variation.ov-opacity %}{{variation.ov-opacity}}{% else %}{{site.backgorund.overlay.opacity}}{% endif %};
+            background-color: {% if variation.overlay.color %}{{variation.overlay.color}}{% else %}{{site.background.overlay.color}}{% endif %};
+            opacity: {% if variation.overlay.opacity %}{{variation.overlay.opacity}}{% else %}{{site.backgorund.overlay.opacity}}{% endif %};
             {% endcapture %}
 
             <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
