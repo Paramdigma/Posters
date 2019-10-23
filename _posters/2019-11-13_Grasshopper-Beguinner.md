@@ -3,7 +3,7 @@ title: 'Parametric Methodology'
 subtitle: 'Grasshopper Beguinners Course'
 description: 'This 3 day course course will be centred on achitectural design using parametric tools, specifically Rhino+Grasshopper. We will cover the basic use of the different components, and explain the main metodology...'
 
-date:
+dates:
   day: 29-31
   month: NOVEMBER
   year: 2019
