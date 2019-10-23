@@ -1,5 +1,5 @@
 theme: jekyll-theme-cayman
 
-collecions:
+collections:
   posters:
     output: true
