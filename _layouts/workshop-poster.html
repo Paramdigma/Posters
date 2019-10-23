@@ -18,7 +18,7 @@
 
             {% capture pageContentStyle %}
                 {% if variation.background-image%}background-image: url({{variation.background-image}}); 
-                {% else %}background-image: url({{site.backgoround.image}});
+                {% else %}background-image: url({{site.background.image}});
                 {% endif %}
                 {% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;
                 {% else %}
