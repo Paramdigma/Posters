@@ -2,5 +2,5 @@ theme: jekyll-theme-cayman
 
 collections:
   posters:
-    permalink: '/:title/'
+    permalink: '/:title.html'
     output: true
