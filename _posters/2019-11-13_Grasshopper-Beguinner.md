@@ -1,5 +1,4 @@
 ---
-layout: workshop-poster
 title: 'Grasshopper Beguinner Workshop'
 author:
   name: 'Paramdigma'
