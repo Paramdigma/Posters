@@ -1,5 +1,6 @@
 ---
-title: 'Grasshopper Beguinner Workshop'
+layout: workshop-poster
+title: 'Grasshopper Beguinner Workshop 22'
 author:
   name: 'Paramdigma'
   category:
