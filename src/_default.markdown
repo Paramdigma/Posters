@@ -11,8 +11,8 @@ author:
       account: 
 
 variations:
-  - ov-color: 
-    ov-opacity: 
+  - ov-color: black
+    ov-opacity: 0.5
 
 workshop:
   - title: 
@@ -20,7 +20,7 @@ workshop:
     description: 
     collaborator-logos: # Path to collaborator logos, preferably vector images
       - 
-    date: # Date for the workshop, accepts anything
+    date: # Date for the workshop, accepts any string values
       day: 
       month: 
       year: 
