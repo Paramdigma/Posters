@@ -12,78 +12,76 @@
 </head>
 
 <body>
-    {% for workshop in page.workshop %}    
-        {% for variation in page.variations %}
-            {% capture text-color %}
-                {% if variation.text-color %}color: {{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
-            {% endcapture %}
+    {% for variation in page.variations %}
+        {% capture text-color %}
+            {% if variation.text-color %}color: {{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
+        {% endcapture %}
 
-            {% capture pageContentStyle %}
-                {% if workshop.bg-img%}background-image: url({{workshop.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
-            {% endcapture %}
+        {% capture pageContentStyle %}
+            {% if workshop.bg-img%}background-image: url({{workshop.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
+        {% endcapture %}
 
-            {% capture overlayStyle %}
-            {% if variation.ov-color %}background-color: {{variation.ov-color}};{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}};{% endif %}
-            {% endcapture %}
+        {% capture overlayStyle %}
+        {% if variation.ov-color %}background-color: {{variation.ov-color}};{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}};{% endif %}
+        {% endcapture %}
 
-            <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
-                <div class="page-content" style="{{pageContentStyle}}">
-                    <div class="overlay" style="{{overlayStyle}}">
-                    </div>
-                    <div class="page-header">
-                        <div class="left">
-                            <img src="{{page.author.logo}}" alt="" class="logo">
-                            <div class="company-data" style="{{text-color}}">
-                                <span class="company-name">{{page.author.name}}</span>
-                                {% for category in page.author.category %}                            
-                                <span>{{category}}</span>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <div class="right">
-                            {% for logo in workshop.collaborator-logos %}
-                            <img src="{{logo}}" alt="" class="logo" style="{{text-color}}">
+        <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
+            <div class="page-content" style="{{pageContentStyle}}">
+                <div class="overlay" style="{{overlayStyle}}">
+                </div>
+                <div class="page-header">
+                    <div class="left">
+                        <img src="{{page.author.logo}}" alt="" class="logo">
+                        <div class="company-data" style="{{text-color}}">
+                            <span class="company-name">{{page.author.name}}</span>
+                            {% for category in page.author.category %}                            
+                            <span>{{category}}</span>
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="page-body">
-                        <div class="date">
-                            <span class="month">{{workshop.date.month}}</span>
-                            <span class="day">{{workshop.date.day}}</span>
-                            <span class="year">{{workshop.date.year}}</span>
-                        </div>
-                        <h1 class="title">{{workshop.title}}</h1>
-                        <h4 class="subtitle">{{workshop.subtitle}}</h4>
-                        <div class="description">
-                            <p>{{workshop.description}}</p>
-                            
-                        </div>
-                    </div>
-                    <div class="page-footer">
-                        <div class="schedule">
-                            <div class="table">
-                                {% for item in workshop.shedule %}                           
-                                    <div style="{{text-color}}">
-                                            <h4>{{item.name}}</h4>
-                                            {% for detail in item.details %}                             
-                                            <p>{{detail}}</p>
-                                            {% endfor %}
-                                    </div>
-                                    {% endfor %}
-                            </div>
-                        </div> 
-                        <div class="social-links">
-                            {% for socialItem in author.social %}                              
-                            <div class="icon">
-                                <i class="{{socialItem.icon}}"></i>
-                                <span>{{socialItem.account}}</span>
-                            </div>
-                            {% endfor %}
-                        </div>
+                    <div class="right">
+                        {% for logo in workshop.collaborator-logos %}
+                        <img src="{{logo}}" alt="" class="logo" style="{{text-color}}">
+                        {% endfor %}
                     </div>
                 </div>
-            </page>
-        {% endfor %}
+                <div class="page-body">
+                    <div class="date">
+                        <span class="month">{{workshop.date.month}}</span>
+                        <span class="day">{{workshop.date.day}}</span>
+                        <span class="year">{{workshop.date.year}}</span>
+                    </div>
+                    <h1 class="title">{{workshop.title}}</h1>
+                    <h4 class="subtitle">{{workshop.subtitle}}</h4>
+                    <div class="description">
+                        <p>{{workshop.description}}</p>
+                        
+                    </div>
+                </div>
+                <div class="page-footer">
+                    <div class="schedule">
+                        <div class="table">
+                            {% for item in workshop.shedule %}                           
+                                <div style="{{text-color}}">
+                                        <h4>{{item.name}}</h4>
+                                        {% for detail in item.details %}                             
+                                        <p>{{detail}}</p>
+                                        {% endfor %}
+                                </div>
+                                {% endfor %}
+                        </div>
+                    </div> 
+                    <div class="social-links">
+                        {% for socialItem in author.social %}                              
+                        <div class="icon">
+                            <i class="{{socialItem.icon}}"></i>
+                            <span>{{socialItem.account}}</span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </page>
     {% endfor %}
 </body>
 
