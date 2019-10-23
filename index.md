@@ -6,5 +6,5 @@ title: Paramdigma Workshop Posters
 # Existing posters
 
 {% for poster in site.posters %}
-[{{poster.workshop.date.day}} {{poster.workshop.date.month}} {{poster.workshop.date.year}} - **{{poster.title}}**]({{poster.url | relative_url }})
+[{{poster.workshop.dates.day}} {{poster.workshop.dates.month}} {{poster.workshop.dates.year}} - **{{poster.title}}**]({{poster.url | relative_url }})
 {% endfor %}
