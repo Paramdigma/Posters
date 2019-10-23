@@ -4,3 +4,10 @@ collections:
   posters:
     permalink: '/:title.html'
     output: true
+
+defaults:
+  - scope:
+      path: '' # an empty string here means all files in the project
+      type: 'posters' # previously `post` in Jekyll 2.2.
+    values:
+      layout: 'workshop-poster'
