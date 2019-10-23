@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>$title$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    $for(workshop)$
+    $for(variations)$
+    <page size="A3" $if(variations.landscape)$layout="landscape"$endif$>
+        <div class="page-content" style="$if(workshop.bg-img)$background-image: url($workshop.bg-img$);$endif$$if(variations.text-color)$color:$variations.text-color$; border-color: $variations.text-color$$endif$">
+            <div class="overlay" style="$if(variations.ov-color)$background-color: $variations.ov-color$;$endif$ opacity: $if(variations.ov-opacity)$$variations.ov-opacity$$endif$"></div>
+            <div class="page-header">
+                <div class="left">
+                    <img src="$author.logo$" alt="" class="logo">
+                    <div class="company-data" style="$if(variations.text-color)$color:$variations.text-color$; border-color: $variations.text-color$$endif$">
+                        <span class="company-name">$author.name$</span>
+                        $for(author.category)$
+                        <span>$author.category$</span>
+                        $endfor$
+                    </div>
+                </div>
+                <div class="right">
+                    $for(workshop.collaborator-logos)$
+                    <img src="$workshop.collaborator-logos$" alt="" class="logo" style="$if(variations.text-color)$fill:$variations.text-color$ !important;$endif$">
+                    $endfor$
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="date">
+                    <span class="month">$workshop.date.month$</span>
+                    <span class="day">$workshop.date.day$</span>
+                    <span class="year">$workshop.date.year$</span>
+                </div>
+                <h1 class="title">$workshop.title$</h1>
+                <h4 class="subtitle">$workshop.subtitle$</h4>
+                <div class="description">
+                    <p>$workshop.description$</p>
+                    
+                </div>
+            </div>
+            <div class="page-footer">
+                <div class="schedule">
+                    <div class="table">
+                        $for(workshop.schedule)$
+                        <div style="$if(variations.text-color)$color:$variations.text-color$; border-color: $variations.text-color$$endif$">
+                            <h4>$workshop.schedule.name$</h4>
+                            $for(workshop.schedule.details)$
+                            <p>$workshop.schedule.details$</p>
+                            $endfor$
+                        </div>
+                        $endfor$
+                    </div>
+                </div>
+
+                <div class="social-links">
+                   $for(author.social)$
+                    <div class="icon">
+                        <i class="$author.social.icon$"></i>
+                        <span>$author.social.account$</span>
+                    </div>
+                    $endfor$
+                </div>
+            </div>
+        </div>
+    </page>
+    $endfor$
+    $endfor$
+</body>
+
+</html>
