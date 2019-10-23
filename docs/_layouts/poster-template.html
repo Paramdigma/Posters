@@ -31,7 +31,6 @@
         {% endcapture %}
 
         {% capture overlayStyle %}
-        $if(variations.ov-color)$background-color: $variations.ov-color$;$endif$ opacity: $if(variations.ov-opacity)$$variations.ov-opacity$$endif$
         {% if variation.ov-color %}
             background-color: {{variation.ov-color}} 
         {% endif %}
