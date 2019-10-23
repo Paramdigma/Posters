@@ -4,10 +4,6 @@ title: Paramdigma Workshop Posters
 
 # Existing posters
 
-{% for page in site.pages %}
-{% if page.title %}
-{% unless page.url == '/' %}
-[{{page.workshop.date.day}} {{page.workshop.date.month}} {{page.workshop.date.year}} - **{{page.title}}**]({{page.url | relative_url }})
-{% endunless %}
-{% endif %}
+{% for poster in site.posters %}
+[{{poster.workshop.date.day}} {{poster.workshop.date.month}} {{poster.workshop.date.year}} - **{{poster.title}}**]({{poster.url | relative_url }})
 {% endfor %}
