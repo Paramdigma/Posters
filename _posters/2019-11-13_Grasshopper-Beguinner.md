@@ -30,5 +30,7 @@ variations:
     overlay:
       color: blue
       opacity: 0.7
-    landscape: true
+  - overlay:
+      color: steelblue
+      opacity: 0.4
 ---

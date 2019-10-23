@@ -27,7 +27,7 @@
             opacity: {% if variation.overlay.opacity %}{{variation.overlay.opacity}}{% else %}{{site.backgorund.overlay.opacity}}{% endif %};
             {% endcapture %}
 
-            <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
+            <page size="A3" {% if page.landscape %}layout="landscape"{% endif %}>
                 <div class="page-content" style="{{pageContentStyle}}">
                     <div class="overlay" style="{{overlayStyle}}">
                     </div>

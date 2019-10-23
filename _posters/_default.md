@@ -1,35 +1,27 @@
 ---
-title: 
-subtitle: 
-author:
-  name: 
-  category: 
-    - 
-  logo: 
-  social:
-    - icon: 
-      account: 
+title:
+subtitle:
+description:
+
+dates:
+  day:
+  month:
+  year:
+
+collaborator-logos: # Images only!
+  -
+
+schedule:
+  - name:
+    details:
+      -
+
+landscape: # True or false
 
 variations:
-  - ov-color: black
-    ov-opacity: 0.5
-
-workshop:
-  - title: 
-    subtitle: 
-    description: 
-    collaborator-logos: # Path to collaborator logos, preferably vector images
-      - 
-    date: # Date for the workshop, accepts any string values
-      day: 
-      month: 
-      year: 
-    schedule: # Info for each day/section of the workshop
-      - name: 
-        details:
-          - 
-    bg-img: 
-    bg-overlay:
-      color: black
-      opacity: 0.5
+  - image: # Path to image
+    text-color: # CSS color by name or hexcode
+    overlay:
+      color: # CSS color by name or hexcode
+      opacity: # Value from 0.0 to 1.0
 ---
