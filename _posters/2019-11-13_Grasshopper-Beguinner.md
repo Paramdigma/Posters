@@ -33,6 +33,6 @@ variations:
   - image: assets/img/triangular-gridshell-outside-2-Andres-Flajszer.jpg
     overlay:
       color: steelblue
-      opacity: 0.4
+      opacity: 0.7
   -
 ---
