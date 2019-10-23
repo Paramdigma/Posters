@@ -18,7 +18,7 @@
         {% endcapture %}
 
         {% capture pageContentStyle %}
-            {% if workshop.bg-img%}background-image: url({{workshop.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
+            {% if page.workshop.bg-img%}background-image: url({{page.workshop.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
         {% endcapture %}
 
         {% capture overlayStyle %}
@@ -40,28 +40,28 @@
                         </div>
                     </div>
                     <div class="right">
-                        {% for logo in workshop.collaborator-logos %}
+                        {% for logo in page.workshop.collaborator-logos %}
                         <img src="{{logo}}" alt="" class="logo" style="{{text-color}}">
                         {% endfor %}
                     </div>
                 </div>
                 <div class="page-body">
                     <div class="date">
-                        <span class="month">{{workshop.date.month}}</span>
-                        <span class="day">{{workshop.date.day}}</span>
-                        <span class="year">{{workshop.date.year}}</span>
+                        <span class="month">{{page.workshop.date.month}}</span>
+                        <span class="day">{{page.workshop.date.day}}</span>
+                        <span class="year">{{page.workshop.date.year}}</span>
                     </div>
-                    <h1 class="title">{{workshop.title}}</h1>
-                    <h4 class="subtitle">{{workshop.subtitle}}</h4>
+                    <h1 class="title">{{page.workshop.title}}</h1>
+                    <h4 class="subtitle">{{page.workshop.subtitle}}</h4>
                     <div class="description">
-                        <p>{{workshop.description}}</p>
+                        <p>{{page.workshop.description}}</p>
                         
                     </div>
                 </div>
                 <div class="page-footer">
                     <div class="schedule">
                         <div class="table">
-                            {% for item in workshop.shedule %}                           
+                            {% for item in page.workshop.shedule %}                           
                                 <div style="{{text-color}}">
                                         <h4>{{item.name}}</h4>
                                         {% for detail in item.details %}                             
