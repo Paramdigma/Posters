@@ -8,22 +8,6 @@ dates:
   month: NOVEMBER
   year: 2019
 
-author:
-  name: 'Paramdigma'
-  category:
-    - 'Computational Strategies'
-    - 'Parametric Architecture'
-  logo: assets/img/logo-inverted.svg
-  social:
-    - icon: fas fa-home
-      account: www.paramdigma.com
-    - icon: fab fa-instagram
-      account: '@paramdigma'
-    - icon: fab fa-twitter
-      account: '@paramdigma'
-    - icon: far fa-envelope
-      account: info@paramdigma.com
-
 collaborator-logos:
   - assets/img/logo-inverted.svg
   - assets/img/logo-inverted.svg
@@ -41,14 +25,10 @@ schedule:
     details:
       - 'Modeling a pavillion'
 
-bg-img: assets/img/frances-gunn-57430-unsplash.jpg
-bg-overlay:
-  color: black
-  opacity: 0.5
-
 variations:
   - ov-color: black
     ov-opacity: 0.5
+    background-image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
   - ov-color: blue
     ov-opacity: 0.6
     text-color: white

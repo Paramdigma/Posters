@@ -17,11 +17,18 @@
             {% endcapture %}
 
             {% capture pageContentStyle %}
-                {% if page.bg-img%}background-image: url({{page.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
+                {% if variation.background-image%}background-image: url({{variation.background-image}}); 
+                {% else %}background-image: url({{site.backgorund.image}});
+                {% endif %}
+                {% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;
+                {% else %}
+                    
+                {% endif %}
             {% endcapture %}
 
             {% capture overlayStyle %}
-            {% if variation.ov-color %}background-color: {{variation.ov-color}};{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}};{% endif %}
+            background-color: {% if variation.ov-color %}{{variation.ov-color}}{% else %}{{site.background.overlay.color}}{% endif %};
+            opacity: {% if variation.ov-opacity %}{{variation.ov-opacity}}{% else %}{{site.backgorund.overlay.opacity}}{% endif %};
             {% endcapture %}
 
             <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
@@ -30,10 +37,10 @@
                     </div>
                     <div class="page-header">
                         <div class="left">
-                            <img src="{{page.author.logo}}" alt="" class="logo">
+                            <img src="{{site.author.logo}}" alt="" class="logo">
                             <div class="company-data" style="{{text-color}}">
-                                <span class="company-name">{{page.author.name}}</span>
-                                {% for category in page.author.category %}                            
+                                <span class="company-name">{{site.author.name}}</span>
+                                {% for category in site.author.category %}                            
                                 <span>{{category}}</span>
                                 {% endfor %}
                             </div>
@@ -60,7 +67,7 @@
                     <div class="page-footer">
                         <div class="schedule">
                             <div class="table">
-                                {% for item in page.shedule %}         
+                                {% for item in page.schedule %}         
                                     <div style="{{text-color}}">
                                             <h4>{{item.name}}</h4>
                                             {% for detail in item.details %}                             

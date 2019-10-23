@@ -11,3 +11,25 @@ defaults:
       type: 'posters' # previously `post` in Jekyll 2.2.
     values:
       layout: 'workshop-poster'
+
+author:
+  name: 'Paramdigma'
+  category:
+    - 'Computational Strategies'
+    - 'Parametric Architecture'
+  logo: assets/img/logo-inverted.svg
+  social:
+    - icon: fas fa-home
+      account: www.paramdigma.com
+    - icon: fab fa-instagram
+      account: '@paramdigma'
+    - icon: fab fa-twitter
+      account: '@paramdigma'
+    - icon: far fa-envelope
+      account: info@paramdigma.com
+
+background:
+  image: assets/img/frances-gunn-57430-unsplash.jpg
+  overlay:
+    color: black
+    opacity: 0.5
