@@ -17,7 +17,7 @@
     {
       "label": "Process SCSS",
       "type": "shell",
-      "command": "scss --watch sass/main.scss:assets/css/main.css",
+      "command": "scss --watch sass/main.scss:docs/assets/css/main.css",
       "isBackground": true,
       "problemMatcher": {
         "background": {
