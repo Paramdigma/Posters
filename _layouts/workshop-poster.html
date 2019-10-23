@@ -1,88 +1,87 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{page.title}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/poster.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous">
+    </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{page.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/css/poster.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
-</head>
+    <body>
+        {% for variation in page.variations %}
+            {% capture text-color %}
+                {% if variation.text-color %}color: {{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
+            {% endcapture %}
 
-<body>
-    {% for variation in page.variations %}
-        {% capture text-color %}
-            {% if variation.text-color %}color: {{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
-        {% endcapture %}
+            {% capture pageContentStyle %}
+                {% if page.workshop.bg-img%}background-image: url({{page.workshop.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
+            {% endcapture %}
 
-        {% capture pageContentStyle %}
-            {% if page.workshop.bg-img%}background-image: url({{page.workshop.bg-img}});{% endif %}{% if variation.text-color %}color:{{variation.text-color}}; border-color: {{variation.text-color}} !important;{% endif %}
-        {% endcapture %}
+            {% capture overlayStyle %}
+            {% if variation.ov-color %}background-color: {{variation.ov-color}};{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}};{% endif %}
+            {% endcapture %}
 
-        {% capture overlayStyle %}
-        {% if variation.ov-color %}background-color: {{variation.ov-color}};{% endif %}{% if variation.ov-opacity %}opacity: {{variation.ov-opacity}};{% endif %}
-        {% endcapture %}
-
-        <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
-            <div class="page-content" style="{{pageContentStyle}}">
-                <div class="overlay" style="{{overlayStyle}}">
-                </div>
-                <div class="page-header">
-                    <div class="left">
-                        <img src="{{page.author.logo}}" alt="" class="logo">
-                        <div class="company-data" style="{{text-color}}">
-                            <span class="company-name">{{page.author.name}}</span>
-                            {% for category in page.author.category %}                            
-                            <span>{{category}}</span>
+            <page size="A3" {% if variation.landscape %}layout="landscape"{% endif %}>
+                <div class="page-content" style="{{pageContentStyle}}">
+                    <div class="overlay" style="{{overlayStyle}}">
+                    </div>
+                    <div class="page-header">
+                        <div class="left">
+                            <img src="{{page.author.logo}}" alt="" class="logo">
+                            <div class="company-data" style="{{text-color}}">
+                                <span class="company-name">{{page.author.name}}</span>
+                                {% for category in page.author.category %}                            
+                                <span>{{category}}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="right">
+                            {% for logo in page.workshop.collaborator-logos %}
+                            <img src="{{logo}}" alt="" class="logo" style="{{text-color}}">
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="right">
-                        {% for logo in page.workshop.collaborator-logos %}
-                        <img src="{{logo}}" alt="" class="logo" style="{{text-color}}">
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="page-body">
-                    <div class="date">
-                        <span class="month">{{page.workshop.date.month}}</span>
-                        <span class="day">{{page.workshop.date.day}}</span>
-                        <span class="year">{{page.workshop.date.year}}</span>
-                    </div>
-                    <h1 class="title">{{page.workshop.title}}</h1>
-                    <h4 class="subtitle">{{page.workshop.subtitle}}</h4>
-                    <div class="description">
-                        <p>{{page.workshop.description}}</p>
-                        
-                    </div>
-                </div>
-                <div class="page-footer">
-                    <div class="schedule">
-                        <div class="table">
-                            {% for item in page.workshop.shedule %}         
-                                <div style="{{text-color}}">
-                                        <h4>{{item.name}}</h4>
-                                        {% for detail in item.details %}                             
-                                        <p>{{detail}}</p>
-                                        {% endfor %}
-                                </div>
-                                {% endfor %}
+                    <div class="page-body">
+                        <div class="date">
+                            <span class="month">{{page.workshop.date.month}}</span>
+                            <span class="day">{{page.workshop.date.day}}</span>
+                            <span class="year">{{page.workshop.date.year}}</span>
                         </div>
-                    </div> 
-                    <div class="social-links">
-                        {% for socialItem in author.social %}                              
-                        <div class="icon">
-                            <i class="{{socialItem.icon}}"></i>
-                            <span>{{socialItem.account}}</span>
+                        <h1 class="title">{{page.workshop.title}}</h1>
+                        <h4 class="subtitle">{{page.workshop.subtitle}}</h4>
+                        <div class="description">
+                            <p>{{page.workshop.description}}</p>
+                            
                         </div>
-                        {% endfor %}
+                    </div>
+                    <div class="page-footer">
+                        <div class="schedule">
+                            <div class="table">
+                                {% for item in page.workshop.shedule %}         
+                                    <div style="{{text-color}}">
+                                            <h4>{{item.name}}</h4>
+                                            {% for detail in item.details %}                             
+                                            <p>{{detail}}</p>
+                                            {% endfor %}
+                                    </div>
+                                    {% endfor %}
+                            </div>
+                        </div> 
+                        <div class="social-links">
+                            {% for socialItem in author.social %}                              
+                            <div class="icon">
+                                <i class="{{socialItem.icon}}"></i>
+                                <span>{{socialItem.account}}</span>
+                            </div>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </page>
-    {% endfor %}
-</body>
+            </page>
+        {% endfor %}
+    </body>
 
 </html>
