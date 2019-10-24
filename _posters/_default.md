@@ -8,12 +8,12 @@ dates:
   month:
   year:
 
-collaborator-logos: # Images only!
+collaborator-logos: # Path to images only!
   -
 
 schedule:
   - name:
-    details:
+    details: # List of detailed descriptions
       -
 
 landscape: # True or false
