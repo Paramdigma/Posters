@@ -6,7 +6,7 @@ author:
   category:
     - 'Computational Strategies'
     - 'Parametric Architecture'
-  logo: assets/img/logo-inverted.svg
+  logo: assets/img/paramdigma-white.svg
   social:
     - icon: fas fa-home
       account: www.paramdigma.com
