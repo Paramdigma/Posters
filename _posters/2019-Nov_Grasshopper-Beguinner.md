@@ -34,7 +34,7 @@ variations:
     overlay:
       color: rgb(121,75,234) 
       opacity: 0.7
-    - image: assets/img/samuel-zeller-j0g8taxHZa0.jpg
+  - image: assets/img/samuel-zeller-j0g8taxHZa0.jpg
     overlay:
       color: rgb(6,193,193) 
       opacity: 0.7
