@@ -1,7 +1,4 @@
----
----
-
-body {
+--- --- body {
     background: rgb(204, 204, 204);
     font-family: 'Montserrat', sans-serif;
 }
@@ -47,7 +44,9 @@ page[size="A5"][layout="landscape"] {
 }
 
 @media print {
-    body, page {
+
+    body,
+    page {
         margin: 0 !important;
         box-shadow: none !important;
     }
@@ -200,6 +199,8 @@ page[size="A5"][layout="landscape"] {
     min-width: 80%;
     max-width: 90%;
     min-height: 4em;
+    max-height: 6em;
+    font-size: 100%;
 }
 
 .table {
@@ -228,7 +229,8 @@ page[size="A5"][layout="landscape"] {
             border-left: none;
         }
 
-        h4, p {
+        h4,
+        p {
             margin-block-end: 0;
             margin-block-start: 0;
             text-align: center;
