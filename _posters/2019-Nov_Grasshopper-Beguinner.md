@@ -9,8 +9,6 @@ dates:
   year: 2019
 
 collaborator-logos:
-  - assets/img/logo-inverted.svg
-  - assets/img/logo-inverted.svg
   - assets/img/ADDA-logo_white.png
 
 schedule:
