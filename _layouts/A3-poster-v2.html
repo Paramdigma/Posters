@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{page.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/poster.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        cFK2aPAZSrossorigin="anonymous">
+</head>
+
+<body>
+    {% for variation in page.variations %}
+    {% capture text-color %}
+    {% if variation.text-color %}color: {{variation.text-color}}; border-color: {{variation.text-color}}
+    !important;{% endif %}
+    {% endcapture %}
+
+    {% capture pageContentStyle %}
+    {% if variation.image%}background-image: url({{variation.image}});
+    {% else %}background-image: url({{site.background.image}});{% endif %}
+    {{text-color}}
+    {% endcapture %}
+
+    {% capture overlayStyle %}
+    background-color:
+    {% if variation.overlay.color %}{{variation.overlay.color}}{% else %}{{site.background.overlay.color}}{% endif %};
+    opacity:
+    {% if variation.overlay.opacity %}{{variation.overlay.opacity}}{% else %}{{site.backgorund.overlay.opacity}}{% endif %};
+    {% endcapture %}
+
+    <page size="A3" {% if page.landscape %}layout="landscape" {% endif %}>
+        <div class="page-content" style="{{pageContentStyle}}">
+            <div class="overlay" style="{{overlayStyle}}">
+            </div>
+            <div class="page-header">
+                <div class="left">
+                    <img src="{{site.author.logo}}" alt="" class="logo">
+                    <div class="company-data" style="{{text-color}}">
+                        <span class="company-name">{{site.author.name}}</span>
+                        {% for category in site.author.category %}
+                        <span>{{category}}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="right">
+                    {% for logo in page.collaborator-logos %}
+                    <img src="{{logo}}" alt="" class="logo" style="{{text-color}}">
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="page-body">
+                <div class="date">
+                    <span class="month">{{page.dates.month}}</span>
+                    <span class="day">{{page.dates.day}}</span>
+                    <span class="year">{{page.dates.year}}</span>
+                </div>
+                <h1 class="title">{{page.title}}</h1>
+                <h4 class="subtitle">{{page.subtitle}}</h4>
+                <div class="description">
+                    <p>{{page.description}}</p>
+                </div>
+                <div class="schedule">
+                    <div class="table">
+                        {% for item in page.schedule %}
+                        <div style="{{text-color}}">
+                            <h4>{{item.name}}</h4>
+                            {% for detail in item.details %}
+                            <p>{{detail}}</p>
+                            {% endfor %}
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="page-footer">
+                <div class="social-links">
+                    {% for socialItem in site.author.social %}
+                    <div class="icon">
+                        <i class="{{socialItem.icon}}"></i>
+                        <span>{{socialItem.account}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </page>
+    {% endfor %}
+</body>
+
+</html>
