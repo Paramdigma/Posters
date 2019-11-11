@@ -21,16 +21,16 @@ collaborator-social:
 schedule:
   - name: 'Day 1'
     details:
-      - 9:00 - 14:30
+      - 9:00 - 13:30
       - Basic knowledge
   - name: 'Day 2'
     details:
-      - 9:00 - 14:30
+      - 9:00 - 13:30
       - Working with data trees
       - Complex geometries
   - name: 'Day 3'
     details:
-      - 9:00 - 14:30
+      - 9:00 - 13:30
       - Modeling a pavillion
 
 variations:
@@ -51,7 +51,7 @@ pricing:
   - type: 'Price'
     price: 285
   - type: 'Students (limited)'
-    price: 200
+    price: 205
 
 address: Carrer dels Almogàvers, 165, 08018 Barcelona.
 ---
