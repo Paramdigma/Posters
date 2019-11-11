@@ -9,7 +9,7 @@ dates:
   year: 2019
 
 collaborator-logos:
-  - assets/img/ADDA-logo_white.png
+  - assets/img/ADDA-logo_white.svg
 
 schedule:
   - name: 'Day 1'
