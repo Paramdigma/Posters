@@ -1,5 +1,5 @@
 ---
-layout: A3-poster-v2
+layout: A3-poster
 
 title: 'Grasshopper Introduction'
 subtitle: 'First steps in Parametric Design'
@@ -12,6 +12,11 @@ dates:
 
 collaborator-logos:
   - assets/img/ADDA-logo_white.png
+collaborator-social:
+  - icon: fas fa-home
+    account: www.adda.....
+  - icon: fab fa-twitter
+    account: www.adda.....
 
 schedule:
   - name: 'Day 1'
