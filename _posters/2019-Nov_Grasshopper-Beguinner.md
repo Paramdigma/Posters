@@ -1,5 +1,5 @@
 ---
-layout: A3-poster
+layout: A3-poster-v2
 
 title: 'Grasshopper Introduction'
 subtitle: 'First steps in Parametric Design'
