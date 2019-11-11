@@ -65,5 +65,5 @@ pricing:
   - type: 'Students (limited)'
     price: 205
 
-address: Carrer dels Almogàvers, 165, 08018 Barcelona.
+address: Carrer dels Almogávers 165, 08018 Barcelona
 ---

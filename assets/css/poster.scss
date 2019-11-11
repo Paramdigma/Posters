@@ -208,7 +208,6 @@ page[size="A5"][layout="landscape"] {
 
 .details {
   align-items: center;
-  margin-bottom: 5em;
 
   p {
     width: 100%;
@@ -219,6 +218,7 @@ page[size="A5"][layout="landscape"] {
   .price {
     font-size: 160%;
     width: 100% !important;
+    margin-bottom: 0.5em;
   }
 
   .sep {
@@ -229,7 +229,15 @@ page[size="A5"][layout="landscape"] {
   .address {
     font-style: italic;
     font-size: 160%;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .inscriptions {
+    border: 1px solid white;
+    font-size: 160%;
+    padding: 0.2em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 

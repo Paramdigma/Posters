@@ -76,14 +76,14 @@
                     </div>
                 </div>
                 <div class="details">
-                    <p class="address">{{page.address}}</p>
+                    <p class="address"><i class="fas fa-map-marker-alt"></i> {{page.address}}</p>
                     <p class="price">
                         {% for item in page.pricing %}
                         {% unless item.type == "Price" %}<span class="sep">|</span>{% endunless %}<b>{{item.type}}</b>
-                        —
-                        {{item.price}}€
+                        {{item.price}} €
                         {% endfor %}
                     </p>
+                    <p class="inscriptions"><b>Inscriptions:</b> info@paramdigma.com</p>
                 </div>
                 <h4>Organized by:</h4>
                 <div class="social-links">
