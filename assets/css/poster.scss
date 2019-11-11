@@ -1,267 +1,294 @@
---- --- body {
-    background: rgb(204, 204, 204);
-    font-family: 'Montserrat', sans-serif;
+---
+---
+body {
+  background: rgb(204, 204, 204);
+  font-family: 'Montserrat', sans-serif;
 }
 
 page {
-    background: white;
-    position: relative;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
-    break-after: always !important;
+  background: white;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  break-after: always !important;
 }
 
 page[size="A4"] {
-    width: 210mm;
-    height: 297mm;
+  width: 210mm;
+  height: 297mm;
 }
 
 page[size="A4"][layout="landscape"] {
-    width: 29.7cm;
-    height: 21cm;
+  width: 29.7cm;
+  height: 21cm;
 }
 
 page[size="A3"] {
-    width: 29.7cm;
-    height: 41.99cm;
+  width: 29.7cm;
+  height: 41.99cm;
 }
 
 page[size="A3"][layout="landscape"] {
-    width: 42cm;
-    height: 29.69cm;
+  width: 42cm;
+  height: 29.69cm;
 }
 
 page[size="A5"] {
-    width: 14.8cm;
-    height: 21cm;
+  width: 14.8cm;
+  height: 21cm;
 }
 
 page[size="A5"][layout="landscape"] {
-    width: 21cm;
-    height: 14.8cm;
+  width: 21cm;
+  height: 14.8cm;
 }
 
 @media print {
-
-    body,
-    page {
-        margin: 0 !important;
-        box-shadow: none !important;
-    }
+  body,
+  page {
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
 }
 
 .page-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: url(frances-gunn-57430-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  .logo {
+    max-height: 7em;
+  }
+
+  .overlay {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    background-image: url(frances-gunn-57430-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-    color: white;
+    flex: 1;
+    z-index: 10;
+  }
 
-    .logo {
-        max-height: 7em;
+  .page-header {
+    flex-direction: row;
+
+    .left {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 2em;
     }
 
-    .overlay {
-        background-color: black;
-        opacity: 0.5;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    .right {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 2em;
+    }
+  }
+
+  .page-footer {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+
+    p {
+      width: 60%;
+      text-align: center;
     }
 
-    div {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        z-index: 10;
-    }
+    .social-links {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-top: 0.5em;
 
-    .page-header {
-        flex-direction: row;
-
-        .left {
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 2em;
-        }
-
-        .right {
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-end;
-            padding: 2em;
-        }
-    }
-
-    .page-footer {
-        align-items: center;
-        justify-content: center;
-
-        p {
-            width: 60%;
-            text-align: center;
-        }
-
-        .social-links {
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-
-            .icon {
-                position: relative;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding-left: 1em;
-                padding-right: 1em;
-
-                i {
-                    vertical-align: middle;
-                    margin-right: 0.5em;
-                    line-height: inherit;
-                }
-            }
-        }
-    }
-
-    .page-body {
-        flex: 4;
-        align-items: center;
-        justify-content: center;
-        font-size: 240%;
+      .icon {
         position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
 
-        .title {
-            font-weight: 400;
-            margin-block-end: 0;
+        i {
+          vertical-align: middle;
+          margin-right: 0.5em;
+          line-height: inherit;
         }
-
-        .subtitle {
-            margin-block-start: 0;
-            font-weight: 100;
-        }
-
-        .date {
-            flex: 0;
-            position: absolute;
-            top: 0;
-
-            .day {
-                font-size: 3em;
-                font-weight: 300;
-                margin-block-end: 0;
-                line-height: 0.9em;
-                align-items: flex-start;
-                text-align: center;
-            }
-
-            .month {
-                line-height: 0.8em;
-                font-size: 97%;
-                text-align: center;
-                font-weight: lighter;
-            }
-
-            .year {
-                letter-spacing: 20pt;
-                text-align: center;
-                font-size: 120%;
-                line-height: 0.8em;
-                font-weight: lighter;
-            }
-        }
-
-        .description {
-            flex: 0;
-            position: absolute;
-            bottom: 0;
-            font-size: 50%;
-            max-width: 60%;
-            text-align: center;
-            margin-block-end: 4em;
-        }
+      }
     }
+  }
+
+  .page-body {
+    flex: 5;
+    align-items: center;
+    justify-content: center;
+    font-size: 240%;
+    position: relative;
+    align-content: center;
+    margin-top: 5em;
+
+    .title {
+      font-weight: 400;
+      margin-block-end: 0;
+    }
+
+    .subtitle {
+      margin-block-start: 0;
+      font-weight: 100;
+      margin-bottom: 3em;
+    }
+
+    .date {
+      flex: 0;
+      top: 0;
+
+      .day {
+        font-size: 3em;
+        font-weight: 00;
+        margin-block-end: 0;
+        line-height: 0.9em;
+        align-items: flex-start;
+        text-align: center;
+      }
+
+      .month {
+        line-height: 0.8em;
+        font-size: 97%;
+        text-align: center;
+        font-weight: lighter;
+      }
+
+      .year {
+        letter-spacing: 20pt;
+        text-align: center;
+        font-size: 120%;
+        line-height: 0.8em;
+        font-weight: lighter;
+      }
+    }
+
+    .description {
+      flex: 0;
+      position: relative;
+      bottom: 0;
+      font-size: 50%;
+      max-width: 60%;
+      text-align: center;
+      margin-block-end: 4em;
+    }
+  }
 }
 
 .schedule {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 80%;
-    max-width: 90%;
-    min-height: 4em;
-    max-height: 6em;
-    font-size: 100%;
+  align-items: center;
+  justify-content: center;
+  min-width: 80%;
+  max-width: 90%;
+  font-size: 100%;
+  margin-bottom: 5em;
+}
+
+.details {
+  align-items: center;
+  margin-bottom: 5em;
+
+  p {
+    width: 100%;
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+
+  .price {
+    font-size: 160%;
+    width: 100% !important;
+  }
+
+  .sep {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  .address {
+    font-style: italic;
+    font-size: 160%;
+    margin-bottom: 0.5em;
+  }
 }
 
 .table {
-    display: flex;
-    flex-direction: row !important;
-    max-width: 100%;
-    width: 100%;
-    min-height: 4em !important;
-    max-height: 70%;
+  display: flex;
+  flex-direction: row !important;
+  max-width: 100%;
+  width: 100%;
+  min-height: 4em !important;
 
-    div {
-        display: block;
-        border-left: 1px solid white;
-        border-right: 1px solid white;
-        padding-left: 1em;
-        padding-right: 1em;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+  div {
+    display: block;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding-left: 1em;
+    padding-right: 1em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-        &:first-child {
-            border-right: none;
-        }
-
-        &:last-child {
-            border-left: none;
-        }
-
-        h4,
-        p {
-            margin-block-end: 0;
-            margin-block-start: 0;
-            text-align: center;
-            width: 100% !important;
-        }
-
-        h4 {
-            flex: 1;
-            justify-content: flex-start;
-            align-items: flex-start;
-            margin-block-end: 1em;
-        }
-
-        p {}
+    &:first-child {
+      border-right: none;
     }
+
+    &:last-child {
+      border-left: none;
+    }
+
+    h4,
+    p {
+      margin-block-end: 0;
+      margin-block-start: 0;
+      text-align: center;
+      width: 100% !important;
+    }
+
+    h4 {
+      flex: 1;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-block-end: 1em;
+    }
+  }
 }
 
 .company-data {
-    display: flex;
-    min-height: 7em;
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 1px solid white;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  min-height: 7em;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid white;
+  flex: 1;
+  justify-content: center;
 
-    .company-name {
-        font-weight: bolder;
-    }
+  .company-name {
+    font-weight: bolder;
+  }
 }
 
 .svg-logo path {
-    fill: black !important;
+  fill: black !important;
 }
