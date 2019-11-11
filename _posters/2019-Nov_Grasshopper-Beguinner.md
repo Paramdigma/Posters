@@ -15,7 +15,7 @@ collaborator-logos:
 collaborator-social:
   - icon: fas fa-home
     account: 'www.adda-lab.com'
-  - icon: fab fa-twitter
+  - icon: fab fa-instagram
     account: '@adda_lab'
 
 schedule:
@@ -43,6 +43,18 @@ variations:
       color: rgb(121,75,234)
       opacity: 0.7
   - image: assets/img/samuel-zeller-j0g8taxHZa0.jpg
+    overlay:
+      color: rgb(6,193,193)
+      opacity: 0.7
+  - image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
+    overlay:
+      color: rgb(252,203,45)
+      opacity: 0.7
+  - image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
+    overlay:
+      color: rgb(121,75,234)
+      opacity: 0.7
+  - image: assets/img/ricardo-gomez-angel-393236-unsplash.jpg
     overlay:
       color: rgb(6,193,193)
       opacity: 0.7
