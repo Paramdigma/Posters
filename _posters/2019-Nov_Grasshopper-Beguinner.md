@@ -11,7 +11,7 @@ dates:
   year: 2019
 
 collaborator-logos:
-  - assets/img/ADDA-logo_white.png
+  - assets/img/ADDA-logo_white.svg
 collaborator-social:
   - icon: fas fa-home
     account: 'www.adda-lab.com'
@@ -53,5 +53,5 @@ pricing:
   - type: 'Students (limited)'
     price: 200
 
-address: MISSING ADDRESS!!!!
+address: Carrer dels Almogàvers, 165, 08018 Barcelona.
 ---
