@@ -14,9 +14,9 @@ collaborator-logos:
   - assets/img/ADDA-logo_white.png
 collaborator-social:
   - icon: fas fa-home
-    account: www.adda.....
+    account: 'www.adda-lab.com'
   - icon: fab fa-twitter
-    account: www.adda.....
+    account: '@adda_lab'
 
 schedule:
   - name: 'Day 1'

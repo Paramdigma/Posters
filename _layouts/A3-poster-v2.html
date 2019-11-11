@@ -79,16 +79,26 @@
                     <p class="address">{{page.address}}</p>
                     <p class="price">
                         {% for item in page.pricing %}
-                        {% unless item.type == "Price" %}<span class="sep">|</span>{% endunless %}<b>{{item.type}}</b> —
+                        {% unless item.type == "Price" %}<span class="sep">|</span>{% endunless %}<b>{{item.type}}</b>
+                        —
                         {{item.price}}€
                         {% endfor %}
                     </p>
                 </div>
+                <h4>Organized by:</h4>
                 <div class="social-links">
                     {% for socialItem in site.author.social %}
                     <div class="icon">
                         <i class="{{socialItem.icon}}"></i>
-                        <span>{{socialItem.account}}</span>
+                        <span style="white-space: nowrap;">{{socialItem.account}}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="social-links">
+                    {% for socialItem in page.collaborator-social %}
+                    <div class="icon">
+                        <i class="{{socialItem.icon}}"></i>
+                        <span style="white-space: nowrap;">{{socialItem.account}}</span>
                     </div>
                     {% endfor %}
                 </div>

@@ -116,6 +116,7 @@ page[size="A5"][layout="landscape"] {
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      padding-top: 0.5em;
 
       .icon {
         position: relative;
@@ -157,7 +158,6 @@ page[size="A5"][layout="landscape"] {
 
     .date {
       flex: 0;
-      position: absolute;
       top: 0;
 
       .day {
@@ -239,7 +239,6 @@ page[size="A5"][layout="landscape"] {
   max-width: 100%;
   width: 100%;
   min-height: 4em !important;
-  max-height: 70%;
 
   div {
     display: block;
